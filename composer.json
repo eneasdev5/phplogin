@@ -1,0 +1,24 @@
+{
+    "name": "eneassena/phplogin",
+    "require-dev": {
+        "coffeecode/router": "^2.0",
+        "coffeecode/datalayer": "^2.0",
+        "league/plates": "3.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpLogin\\": "src/"
+        },
+        "files": [
+            "src/config/session.php",
+            "src/config/mysql.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "eneasdev5",
+            "email": "eneasdev@gmail.com"
+        }
+    ],
+    "require": {}
+}
