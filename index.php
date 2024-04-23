@@ -4,7 +4,13 @@ require __DIR__ . '/vendor/autoload.php';
 use CoffeeCode\Router\Router;
 use \PhpLogin\controllers\middleware\User;
 
+
+$senha = "admin132";
+var_dump(password_hash($senha, PASSWORD_DEFAULT));
+
+
 $app = new Router(ROOT);
+
 
 /**
  * Controller: WebController

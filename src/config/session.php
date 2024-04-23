@@ -2,7 +2,7 @@
 
 session_start();
 
-const ROOT = 'http://127.0.0.1/app-php-basic/phplogin';
+const ROOT = 'http://localhost/phplogin';
 const PATH_VIEW = __DIR__ . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "views/";
 
 

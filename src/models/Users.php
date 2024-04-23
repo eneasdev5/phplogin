@@ -3,6 +3,7 @@
 namespace PhpLogin\models;
 
 use CoffeeCode\DataLayer\DataLayer;
+use PhpLogin\controllers\middleware\User;
 
 class Users extends DataLayer
 {
@@ -11,9 +12,10 @@ class Users extends DataLayer
         parent::__construct('accounts', ['username', 'password', 'email']);
     }
 
-    public function checkLogin(array $credenciais): Users
+    public function checkLogin(array $credenciais): ?Users
     {
         $u = $this->find("username=:username", "username=" . $credenciais['username'])->fetch();
+
         return $u;
     }
 
@@ -32,3 +34,12 @@ class Users extends DataLayer
         $this->save();
     }
 }
+
+
+$user = new Users;
+$user->username = 'sdfds';
+$user->password = password_hash('dsfsd', PASSWORD_BCRYPT);
+$user->email = 'esdf@dsf.com';
+$res = $user->save();
+
+var_dump($res, $user->fail());

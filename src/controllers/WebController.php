@@ -34,6 +34,7 @@ class WebController extends Controller
         $this->user = $this->user->checkLogin($credenciais);
 
         if (
+            $this->user &&
             password_verify(
                 $credenciais['password'],
                 $this->user->password
